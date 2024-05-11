@@ -1,0 +1,26 @@
+.ex-list {
+    li {
+        position: relative;
+        height: 495px;
+        outline: 2px solid rgba(255, 255, 255, 0);
+        outline-offset: -2px;
+        transition: 0.4s ease-in-out;
+        &:hover {
+            outline: 2px solid rgba(255, 255, 255, 1);
+            outline-offset: -2px;
+        }
+        strong {
+            color: #fff;
+            font-size: var(--font-size-22);
+            font-weight: var(--fointWait-700);
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 18px;
+            img {
+                width: 570px;
+                height: 420px;
+            }
+        }
+    }
+}

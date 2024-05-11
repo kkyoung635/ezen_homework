@@ -1,0 +1,50 @@
+.con-box {
+    width: 100%;
+    .inner {
+        padding: 110px 0 150px 0;
+        text-align: center;
+        h2 {
+            font-size: 40px;
+            letter-spacing: -0.3px;
+            text-align: center;
+            margin-bottom: 20px;
+            + p {
+                font-size: 18px;
+                margin-bottom: 50px;
+            }
+        }
+    }
+    .time-bar {
+        a {
+            font-size: var(--font-size-18);
+            height: 78px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i {
+                font-size: var(--font-size-30);
+                color: #aaa;
+                margin-right: 20px;
+            }
+            p {
+                font-weight: var(--fointWait-700);
+                .week {
+                    font-weight: var(--fointWait-400);
+                    margin-left: 30px;
+                    margin-right: 20px;
+                    position: relative;
+                    &:last-child::before {
+                        content: '';
+                        width: 1px;
+                        height: 18px;
+                        background: #bbb;
+                        display: block;
+                        position: absolute;
+                        left: -15px;
+                        top: 3px;
+                    }
+                }
+            }
+        }
+    }
+}

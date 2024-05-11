@@ -1,0 +1,33 @@
+.top-menu {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    display: flex;
+    li {
+        position: relative;
+        a {
+            font-size: 14px;
+            margin-left: 10px;
+        }
+        &:first-child {
+            a {
+                margin-right: 15px;
+            }
+            a::after {
+                content: '';
+                width: 1px;
+                height: 16px;
+                background: #dcdcdc;
+                display: block;
+                position: absolute;
+                right: 2px;
+                top: 5px;
+            }
+        }
+        &:last-child {
+            a {
+                font-weight: var(--fointWait-700);
+            }
+        }
+    }
+}

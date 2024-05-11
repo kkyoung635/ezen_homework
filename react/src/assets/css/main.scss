@@ -1,0 +1,26 @@
+#wrap {
+    width: 100%;
+    min-width: 1600px;
+}
+.inner {
+    width: 1170px;
+    margin: auto;
+    position: relative;
+    box-sizing: border-box;
+}
+#header,
+#visual,
+#subVisual,
+#subMenuBar,
+#container,
+#content,
+#footer {
+    width: 100%;
+}
+.date {
+    font-size: var(--font-size-14);
+}
+::selection {
+    background: var(--main-color);
+    color: #fff;
+}
