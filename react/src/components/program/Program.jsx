@@ -1,6 +1,6 @@
 import './Program.scss';
 import ProgramList from './ProgramList';
-import { pgList } from '../assets/api/data';
+import { pgList } from '../../assets/api/data';
 const Program = () => {
     console.log(pgList);
     return (

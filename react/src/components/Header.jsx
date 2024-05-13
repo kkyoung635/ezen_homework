@@ -8,10 +8,7 @@ const Header = () => {
                 <div className="inner">
                     <h1>
                         <a href="index.html">
-                            <img
-                                src="https://adventure.lotteworld.com/common_mus/images/logo.png"
-                                alt="로고"
-                            />
+                            <img src="./images/logo.png" alt="로고" />
                         </a>
                     </h1>
                     <Topmenu />

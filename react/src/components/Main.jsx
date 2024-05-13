@@ -1,7 +1,7 @@
-import Exhibition from './Exhibition';
-import News from './News';
-import Program from './Program';
-import TimeBar from './TimeBar';
+import Exhibition from './exhibition/Exhibition';
+import News from './news/News';
+import Program from './program/Program';
+import TimeBar from './timebar/TimeBar';
 // import './Main.scss';
 
 const Main = () => {

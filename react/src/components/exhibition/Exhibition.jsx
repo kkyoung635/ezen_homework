@@ -1,6 +1,6 @@
 import './Exhibition.scss';
 import ExhibitionList from './ExhibitionList';
-import { exList } from '../assets/api/data.js';
+import { exList } from '../../assets/api/data.js';
 
 const Exhibition = () => {
     return (

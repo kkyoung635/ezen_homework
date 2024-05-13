@@ -1,4 +1,4 @@
-import './Visual.scss';
+import React, { useRef, useState } from 'react';
 const Visual = () => {
     return (
         <>
