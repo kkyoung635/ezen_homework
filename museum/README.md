@@ -1,5 +1,6 @@
 이젠아카데미<br>
 과제 기간 : 0510 ~ 0511 <br>
+preview : https://kkyoung635.github.io/ezen_homework/museum/dist<br>
 
 <hr />
 <h2>민속박물관 react로 작업</h2>
