@@ -1,14 +1,13 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { onDel, onEdit } from '../../../store/modules/orderSlice';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const CartItem = ({ order }) => {
     const { id, name, imgurl, total, quantity } = order;
     const dispatch = useDispatch();
 
     const [modQuan, setModQuan] = useState(quantity);
-    let modOrder = { ...order, quantity: modQuan }; // Ensure modOrder is updated with current state
-    // const { current } = useSelector((state) => state.order);
+    let modOrder = { ...order, quantity: modQuan };
 
     const changeInput = (e) => {
         const { value } = e.target;
@@ -17,6 +16,10 @@ const CartItem = ({ order }) => {
         modOrder = { ...order, quantity: modQuan };
         console.log(modOrder);
     };
+
+    useEffect(() => {
+        setModQuan(quantity);
+    }, [quantity]);
     return (
         <tr>
             <td>

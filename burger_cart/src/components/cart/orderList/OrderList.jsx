@@ -26,12 +26,13 @@ const OrderList = () => {
             total: quantity * newMenu.price,
         };
         setOrders(newOrders); // 상태 업데이트
+        setQuantity(1);
     };
 
     useEffect(() => {
         if (orders.name) {
             dispatch(onAdd(orders));
-            cntRef.current.focus();
+            setQuantity(1);
         }
     }, [orders]);
     return (
@@ -46,7 +47,7 @@ const OrderList = () => {
 
                     <p>
                         <span>수량</span>
-                        <select name="amount" id="amount" value={quantity} onChange={onQuan} ref={cntRef}>
+                        <select name="amount" id="amount" value={quantity} onChange={onQuan}>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>

@@ -36,11 +36,12 @@ export const orderSlice = createSlice({
             state.isCart = !action.payload;
         },
         onEdit: (state, action) => {
-            console.log('edit', action.payload);
             const { id, quantity } = action.payload;
-            state.orderData = state.orderData.filter((order) =>
-                order.id === id ? ((order.quantity = quantity), (order.total = quantity * order.price)) : order
-            );
+            const editData = state.orderData.find((order) => order.id === id);
+            if (editData) {
+                editData.quantity = action.payload.quantity;
+                editData.total = editData.quantity * editData.price;
+            }
             state.isMsg = true;
             state.msg = '수량을 수정했습니다.';
         },
