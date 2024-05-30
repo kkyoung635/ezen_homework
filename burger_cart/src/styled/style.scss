@@ -167,19 +167,37 @@ button {
 .order-list {
     // display: none;
     border-top: 3px dashed #ddd;
-
-    padding: 50px 200px;
+    height: 300px;
     box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    .form-inner {
+        width: 60%;
+    }
+    img {
+        position: absolute;
+        left: -150px;
+        top: -90px;
+        width: 85%;
+        // display: none;
+    }
     h2 {
         font-size: 24px;
         text-align: center;
         margin-bottom: 30px;
+        word-break: keep-all;
+        font-weight: 700;
     }
     p {
+        width: 50%;
         display: flex;
+        margin: auto;
         justify-content: space-between;
         &:not(:nth-of-type(1)) {
-            padding: 10px 0;
+            padding-top: 10px;
         }
         select {
             width: 50px;
@@ -187,8 +205,8 @@ button {
         }
     }
     button {
-        display: block;
         width: 100%;
+        display: block;
     }
 }
 
@@ -267,14 +285,16 @@ button {
         }
     }
     .fin-order {
+        font-size: 20px;
         padding: 60px 0;
         display: flex;
-        gap: 20px;
+        gap: 10px;
         justify-content: center;
         align-items: center;
         span {
         }
         button {
+            vertical-align: middle;
         }
     }
 }

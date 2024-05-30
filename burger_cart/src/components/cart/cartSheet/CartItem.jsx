@@ -14,7 +14,6 @@ const CartItem = ({ order }) => {
         if (Number.isNaN(value.trim())) return false;
         setModQuan(parseInt(value));
         modOrder = { ...order, quantity: modQuan };
-        console.log(modOrder);
     };
 
     useEffect(() => {

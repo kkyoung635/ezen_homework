@@ -39,31 +39,36 @@ const OrderList = () => {
         <>
             {newMenu && (
                 <form className="order-list" onSubmit={onSubmit}>
-                    <h2>{newMenu.menuname}</h2>
-                    <p>
-                        <span>판매가</span>
-                        <span>{newMenu.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} : 원</span>
-                    </p>
+                    <img src={newMenu.imgurl} alt={newMenu.menu} />
+                    <div className="form-inner">
+                        <h2>{newMenu.menuname}</h2>
+                        <p>
+                            <span>판매가</span>
+                            <span>{newMenu.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} : 원</span>
+                        </p>
 
-                    <p>
-                        <span>수량</span>
-                        <select name="amount" id="amount" value={quantity} onChange={onQuan}>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                        </select>
-                    </p>
-                    <p>
-                        <span>합계</span>
-                        <span>{(quantity * newMenu.price).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원</span>
-                    </p>
-                    <button type="submit">메뉴추가</button>
+                        <p>
+                            <span>수량</span>
+                            <select name="amount" id="amount" value={quantity} onChange={onQuan}>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </p>
+                        <p>
+                            <span>합계</span>
+                            <span>{(quantity * newMenu.price).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원</span>
+                        </p>
+                        <p>
+                            <button type="submit">메뉴추가</button>
+                        </p>
+                    </div>
                 </form>
             )}
         </>
