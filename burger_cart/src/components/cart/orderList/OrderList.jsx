@@ -44,7 +44,7 @@ const OrderList = () => {
                         <h2>{newMenu.menuname}</h2>
                         <p>
                             <span>판매가</span>
-                            <span>{newMenu.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} : 원</span>
+                            <span>{newMenu.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원</span>
                         </p>
 
                         <p>
